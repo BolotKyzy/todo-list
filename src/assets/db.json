@@ -1,0 +1,74 @@
+{
+  "lists": [
+    {
+      "id": 1,
+      "name": "Shopping"
+    },
+    {
+      "id": 2,
+      "name": "Front-End"
+    },
+    {
+      "id": 3,
+      "name": "Films and TV series "
+    },
+    {
+      "id": 4,
+      "name": "Books"
+    },
+    {
+      "id": 5,
+      "name": "Personal"
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "listId": 2,
+      "text": "Learn Javascript",
+      "completed": true
+    },
+    {
+      "id": 2,
+      "listId": 2,
+      "text": "Learn C++",
+      "completed": true
+    },
+    {
+      "id": 3,
+      "listId": 3,
+      "text": "Hidden figures",
+      "completed": true
+    },
+    {
+      "listId": 2,
+      "text": "Learn Css ",
+      "completed": false,
+      "id": 4
+    },
+    {
+      "listId": 2,
+      "text": "Redux124",
+      "completed": false,
+      "id": 8
+    },
+    {
+      "listId": 4,
+      "text": "Преступление и наказанаие",
+      "completed": true,
+      "id": 9
+    },
+    {
+      "listId": 5,
+      "text": "do the morning exersize",
+      "completed": true,
+      "id": 11
+    },
+    {
+      "listId": 4,
+      "text": "Python for beginners",
+      "completed": true,
+      "id": 12
+    }
+  ]
+}
