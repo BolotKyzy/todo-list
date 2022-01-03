@@ -11,6 +11,7 @@ import axios from 'axios';
 import { fetchData, removeCategory } from './actions';
 
 function App({allLists, fetchData}) {
+
   // const listFromState = useSelector(state => ([...state.lists]));
   // console.log(listFromState);
 
@@ -26,10 +27,12 @@ function App({allLists, fetchData}) {
     })
     // fetchData();
     // setLists(listFromState);
-
-
   },[]);
 
+  
+ 
+  
+    
 
   React.useEffect(() => {
     const listId = location.pathname.split('/lists/')[1];
@@ -37,6 +40,8 @@ function App({allLists, fetchData}) {
       const list = lists.find(list => list.id == listId);
       setActiveItem(list);
     }
+    // setLists(listF  romState);
+
 
   }, [lists, location.pathname])
   

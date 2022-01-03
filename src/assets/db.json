@@ -2,7 +2,7 @@
   "lists": [
     {
       "id": 1,
-      "name": "Shopping"
+      "name": "Shopping1"
     },
     {
       "id": 2,
@@ -17,15 +17,15 @@
       "name": "Books"
     },
     {
-      "id": 5,
-      "name": "Personal"
+      "id": 0.6063673987938467,
+      "name": "intern"
     }
   ],
   "tasks": [
     {
       "id": 1,
       "listId": 2,
-      "text": "Learn Javascript",
+      "text": "Learn JS",
       "completed": true
     },
     {
@@ -41,34 +41,16 @@
       "completed": true
     },
     {
-      "listId": 2,
-      "text": "Learn Css ",
-      "completed": false,
-      "id": 4
-    },
-    {
-      "listId": 2,
-      "text": "Redux124",
-      "completed": false,
-      "id": 8
-    },
-    {
       "listId": 4,
       "text": "Преступление и наказанаие",
       "completed": true,
       "id": 9
     },
     {
-      "listId": 5,
-      "text": "do the morning exersize",
+      "listId": 1,
+      "text": "ghb",
       "completed": true,
-      "id": 11
-    },
-    {
-      "listId": 4,
-      "text": "Python for beginners",
-      "completed": true,
-      "id": 12
+      "id": 10
     }
   ]
 }

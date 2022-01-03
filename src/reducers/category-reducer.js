@@ -25,7 +25,8 @@ const CategoryReducer = (state = initialState, action ) => {
 // console.log(fetchAllCategories());
     switch(action.type) {
         case 'FETCH_DATA':
-            return action.payload;
+            state = [...state, ...action.payload];
+            return state;
         case 'REMOVE_CATEGORY':
             return deleteList(state, action.payload);
         default:

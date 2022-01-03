@@ -7,15 +7,15 @@ import {removeCategory} from '../../actions'
 
 const Menu = ({lists,items, isRemovable = false , onClick, onRemove, onClickItem, activeItem, removeCategory} ) => {
   const removeItem = (obj) => {
-    if(window.confirm("Are you really want to delete this category? ")) {
-      const newList = items.filter(item => item.id !== obj.id);
-      axios.delete("http://localhost:3002/lists/"+obj.id).then(() => {
-        onRemove(newList);  
-      })
-    }
-    // removeCategory(obj);
-    // console.log("neww: ", lists);
-    // onRemove(lists);
+    // if(window.confirm("Are you really want to delete this category? ")) {
+    //   const newList = items.filter(item => item.id !== obj.id);
+    //   axios.delete("http://localhost:3002/lists/"+obj.id).then(() => {
+    //     onRemove(newList);  
+    //   })
+    // }
+    removeCategory(obj);
+    console.log("neww: ", lists);
+    onRemove(lists);
   }
 
   const onClickTheitem = (item) =>  {
