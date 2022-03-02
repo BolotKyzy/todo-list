@@ -1,14 +1,6 @@
 {
   "lists": [
     {
-      "id": 1,
-      "name": "Shopping1"
-    },
-    {
-      "id": 2,
-      "name": "Front-End"
-    },
-    {
       "id": 3,
       "name": "Films and TV series "
     },
@@ -17,23 +9,11 @@
       "name": "Books"
     },
     {
-      "id": 0.6063673987938467,
-      "name": "intern"
+      "id": 0.673275584712349,
+      "name": "makers "
     }
   ],
   "tasks": [
-    {
-      "id": 1,
-      "listId": 2,
-      "text": "Learn JS",
-      "completed": true
-    },
-    {
-      "id": 2,
-      "listId": 2,
-      "text": "Learn C++",
-      "completed": true
-    },
     {
       "id": 3,
       "listId": 3,
@@ -47,10 +27,10 @@
       "id": 9
     },
     {
-      "listId": 1,
-      "text": "ghb",
+      "listId": 0.673275584712349,
+      "text": "tz#1",
       "completed": true,
-      "id": 10
+      "id": 12
     }
   ]
 }

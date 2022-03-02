@@ -2,10 +2,7 @@ import React from 'react'
  const Task = ({task, onRemove, onEdit, list, onCompleteTask}) => {
 
   const onChangeCheckbox = (e) => {
-    console.log(list.id, task.id, e.target.checked);
     onCompleteTask(list.id, task.id, e.target.checked);
-
-
   }
 
     return (

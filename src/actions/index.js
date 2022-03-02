@@ -1,41 +1,80 @@
 import axios from "axios";
 
-const fetchData = () =>  async dispatch => {
-    const res = await axios.get("http://localhost:3002/lists?_embed=tasks");
-
-    dispatch( {
-        type: 'FETCH_DATA',
-        payload: res.data
-    })
+const fetchData = () => dispatch => {
+     axios.get("http://localhost:3002/lists?_embed=tasks")
+        .then(res => {
+            console.log(res.data);
+            dispatch(getData(res.data))
+        })
 }
-const removeCategory = (obj) => async dispatch => {
+const getData = (items) => ({
+    type: 'FETCH_DATA',
+    payload: items
+})
+const removeCategory = obj =>  {
     if(window.confirm("Are you really want to delete this category? ")) {
-        await axios.delete("http://localhost:3002/lists/"+obj.id);
-        dispatch( {
+         axios.delete("http://localhost:3002/lists/"+obj.id)
+        return  {
             type: 'REMOVE_CATEGORY',
             payload: obj
-        })
+        }
     }
-    console.log(obj);
 }
-
-const addCategory = (name, desc, imgUrl) => {
+const addCategory = (obj) => {
     return {
         type: 'ADD_NEW_CATEGORY',
-        payload: [name, desc, imgUrl]
+        payload: obj
 
     }
 }
-// const addedToFavoriteList = (pokemon) => {
-//     return {
-//         type: 'ADDED_TO_FAVORITE_LIST',
-//         payload: pokemon
-//     }
+const addTask = (obj) => {
+    return {
+        type: 'ADD_NEW_TASK',
+        payload: obj
 
-// }
+    }
+}
+const deleteTask = (obj) => {
+    if(window.confirm("Do you really want to delete this task?")) {
+        axios
+            .delete("http://localhost:3002/tasks/"+obj[1].id).catch(() => {
+            alert("Не удалось удалить задачу!");
+        });
+        return {
+            type: 'DELETE_THE_TASK',
+            payload: obj
+        }
+    }
+}
+const editTitle = (obj) => {
+    return {
+        type: 'EDIT_TITLE',
+        payload: obj
+    }
+}
+const editTask = (obj) => {
+    return {
+        type: 'EDIT_TASK',
+        payload: obj
+    }
+}
+const completeTask = (obj) => {
+    return {
+        type: 'TO_COMPLETE_TASK',
+        payload: obj
+    }
+}
+
 export {
     fetchData,
-    removeCategory 
+    getData,
+    removeCategory,
+    addCategory,
+    addTask,
+    deleteTask,
+    editTitle,
+    editTask,
+    completeTask
     // addData, 
     // addedToFavoriteList
 };
